@@ -1,0 +1,309 @@
+/* HERO */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 100px;
+}
+.hero__bg-text {
+  position: absolute;
+  right: -60px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  font-size: clamp(160px, 20vw, 280px);
+  color: rgba(200,169,110,0.03);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  padding: 80px 0;
+}
+.hero__eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--sepia);
+  margin-bottom: 28px;
+  animation: fadeUp 1s ease 0.2s both;
+}
+.hero__title {
+  font-family: 'IM Fell English', serif;
+  font-size: clamp(48px, 5.5vw, 80px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--paper);
+  margin-bottom: 24px;
+  animation: fadeUp 1s ease 0.4s both;
+}
+.hero__title em { font-style: italic; color: var(--sepia); }
+.hero__sub {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--ash);
+  margin-bottom: 44px;
+  max-width: 380px;
+  line-height: 1.6;
+  animation: fadeUp 1s ease 0.6s both;
+}
+.hero__actions {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  animation: fadeUp 1s ease 0.8s both;
+}
+.hero__right {
+  display: flex;
+  justify-content: center;
+  animation: fadeUp 1.2s ease 0.6s both;
+}
+.hero__books {
+  display: flex;
+  gap: 24px;
+  align-items: flex-end;
+}
+.hero__book-1 { text-align: center; }
+.hero__book-2 { text-align: center; }
+.hero__book-tag {
+  margin-top: 12px;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--sepia);
+}
+.hero__book-tag.muted { color: var(--ash); }
+.hero__scroll-hint {
+  position: absolute;
+  bottom: 40px;
+  left: 60px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.hero__scroll-hint span {
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(122,112,96,0.4);
+}
+.hero__scroll-line {
+  width: 48px; height: 1px;
+  background: rgba(200,169,110,0.2);
+  position: relative;
+  overflow: hidden;
+}
+.hero__scroll-line::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: var(--sepia);
+  animation: scrollLine 2s ease infinite;
+}
+@keyframes scrollLine {
+  to { left: 100%; }
+}
+
+/* BOOK COVERS (home) */
+.home-book-cover {
+  width: 160px; height: 230px;
+  position: relative;
+  filter: drop-shadow(-10px 16px 24px rgba(0,0,0,0.7));
+  transform: rotate(-2deg);
+  transition: transform 0.4s, filter 0.4s;
+}
+.home-book-cover:hover { transform: rotate(0deg) translateY(-4px); }
+.home-book-cover.small {
+  width: 120px; height: 175px;
+  transform: rotate(2deg);
+}
+.home-book-cover.small:hover { transform: rotate(0deg) translateY(-4px); }
+.home-book-spine {
+  position: absolute;
+  left: 0; top: 0;
+  width: 7px; height: 100%;
+  background: linear-gradient(180deg, #2a1e08, #1a1208);
+}
+.home-book-face {
+  position: absolute;
+  left: 7px; top: 0; right: 0; bottom: 0;
+  background: linear-gradient(145deg, #1c1408, #2d1f0a, #1c1408);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 12px;
+  overflow: hidden;
+}
+.home-book-face::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  border: 1px solid rgba(200,169,110,0.2);
+  pointer-events: none;
+}
+.home-book-ornament { font-size: 18px; color: rgba(200,169,110,0.5); margin-bottom: 12px; }
+.home-book-title {
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  font-size: 12px;
+  color: var(--sepia);
+  text-align: center;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.home-book-divider { width: 24px; height: 1px; background: rgba(200,169,110,0.3); margin: 0 auto 10px; }
+.home-book-author { font-family: var(--font-sans); font-size: 7px; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(200,169,110,0.35); }
+
+/* QUOTE BAND */
+.quote-band {
+  background: var(--fog);
+  border-top: 1px solid rgba(200,169,110,0.08);
+  border-bottom: 1px solid rgba(200,169,110,0.08);
+  padding: 60px;
+}
+.quote-band__inner {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.quote-band__inner blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 2.2vw, 26px);
+  font-style: italic;
+  color: rgba(245,240,232,0.7);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+.quote-band__inner cite {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(200,169,110,0.4);
+}
+
+/* HOME BOOKS SECTION */
+.home-books { padding: 100px 0; }
+.home-books__grid { display: flex; flex-direction: column; gap: 80px; }
+.home-book-card {
+  display: grid;
+  grid-template-columns: 40px auto 1fr;
+  gap: 48px;
+  align-items: center;
+  padding: 48px;
+  background: var(--fog);
+  border: 1px solid rgba(245,240,232,0.04);
+  transition: border-color 0.3s;
+}
+.home-book-card:hover { border-color: rgba(200,169,110,0.15); }
+.home-book-card__num {
+  font-family: 'IM Fell English', serif;
+  font-size: 48px;
+  color: rgba(200,169,110,0.1);
+  line-height: 1;
+  align-self: flex-start;
+}
+.home-book-card__label { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--sepia); margin-bottom: 10px; }
+.home-book-card__title {
+  font-family: 'IM Fell English', serif;
+  font-size: clamp(22px, 2.5vw, 34px);
+  font-weight: 400;
+  color: var(--paper);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.home-book-card__desc { font-size: 14px; line-height: 1.9; color: rgba(245,240,232,0.55); margin-bottom: 28px; max-width: 480px; }
+.home-book-card__footer { display: flex; align-items: center; gap: 24px; }
+.home-book-card__price { font-family: 'Cormorant Garamond', serif; font-size: 22px; color: var(--sepia); }
+.home-book-card__soon { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ash); }
+.home-books__cta { text-align: center; margin-top: 48px; }
+
+/* AUTHOR STRIP */
+.author-strip { padding: 80px 0; }
+.author-strip__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.author-strip__text h2 {
+  font-family: 'IM Fell English', serif;
+  font-size: clamp(28px, 3vw, 44px);
+  font-weight: 400;
+  color: var(--paper);
+  margin-bottom: 20px;
+}
+.author-strip__text h2 em { font-style: italic; color: var(--sepia); }
+.author-strip__text p { font-size: 14px; line-height: 1.9; color: rgba(245,240,232,0.55); }
+.author-strip__quote {
+  padding: 40px;
+  background: var(--fog);
+  border-left: 2px solid rgba(200,169,110,0.3);
+}
+.author-strip__quote blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-style: italic;
+  color: rgba(245,240,232,0.7);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.author-strip__quote cite { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(200,169,110,0.4); }
+
+/* HOME BLOG */
+.home-blog { padding: 80px 0; }
+.home-blog__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; }
+.home-blog-card {
+  display: block;
+  padding: 40px;
+  background: var(--fog);
+  transition: background 0.3s;
+  border-top: 2px solid transparent;
+  cursor: none;
+}
+.home-blog-card:hover { background: var(--dim2); border-top-color: var(--sepia); }
+.home-blog-card__cat { font-size: 9px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--sepia); display: block; margin-bottom: 14px; }
+.home-blog-card__title { font-family: 'IM Fell English', serif; font-size: 20px; font-weight: 400; color: var(--paper); margin-bottom: 14px; line-height: 1.3; }
+.home-blog-card__excerpt { font-size: 13px; line-height: 1.8; color: rgba(245,240,232,0.5); margin-bottom: 20px; }
+.home-blog-card__meta { font-size: 10px; color: var(--ash); display: flex; gap: 8px; }
+.home-blog__cta { text-align: center; margin-top: 48px; }
+
+/* CTA BAND */
+.cta-band {
+  background: var(--fog);
+  padding: 100px 0;
+  border-top: 1px solid rgba(200,169,110,0.08);
+}
+.cta-band__inner { text-align: center; }
+.cta-band__label { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: rgba(200,169,110,0.5); margin-bottom: 20px; }
+.cta-band__title { font-family: 'IM Fell English', serif; font-size: clamp(32px, 4vw, 56px); font-weight: 400; color: var(--paper); margin-bottom: 16px; }
+.cta-band__title em { font-style: italic; color: var(--sepia); }
+.cta-band__sub { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-style: italic; color: var(--ash); margin-bottom: 40px; }
+.cta-band__actions { display: flex; gap: 24px; justify-content: center; align-items: center; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (max-width: 768px) {
+  .hero__inner { grid-template-columns: 1fr; gap: 48px; padding: 60px 0; }
+  .hero__right { display: none; }
+  .hero__scroll-hint { display: none; }
+  .quote-band { padding: 40px 24px; }
+  .home-books { padding: 60px 0; }
+  .home-book-card { grid-template-columns: 1fr; gap: 24px; padding: 28px; }
+  .home-book-card__num { display: none; }
+  .author-strip__inner { grid-template-columns: 1fr; gap: 40px; }
+  .home-blog__grid { grid-template-columns: 1fr; }
+  .cta-band__actions { flex-direction: column; }
+}

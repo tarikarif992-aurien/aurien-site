@@ -1,0 +1,89 @@
+.footer {
+  background: #080806;
+  border-top: 1px solid rgba(245,240,232,0.05);
+  padding: 80px 60px 40px;
+}
+
+.footer__top {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  margin-bottom: 60px;
+}
+
+.footer__brand { flex-shrink: 0; }
+.footer__logo {
+  display: block;
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  font-size: 28px;
+  color: var(--sepia);
+  margin-bottom: 12px;
+}
+.footer__tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 14px;
+  color: var(--ash);
+  max-width: 200px;
+  line-height: 1.6;
+}
+
+.footer__nav {
+  display: flex;
+  gap: 60px;
+}
+.footer__nav-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.footer__nav-title {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: rgba(200,169,110,0.5);
+  margin-bottom: 4px;
+}
+.footer__nav-col a {
+  font-size: 12px;
+  color: var(--ash);
+  transition: color 0.3s;
+  cursor: none;
+  max-width: 200px;
+  line-height: 1.4;
+}
+.footer__nav-col a:hover { color: var(--sepia); }
+.footer__info {
+  font-size: 12px;
+  color: rgba(122,112,96,0.6);
+}
+
+.footer__bottom { max-width: 1140px; margin: 0 auto; }
+.footer__divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200,169,110,0.15), transparent);
+  margin-bottom: 28px;
+}
+.footer__copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  font-size: 11px;
+  color: rgba(122,112,96,0.4);
+}
+.footer__ornament {
+  color: rgba(200,169,110,0.3);
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer { padding: 60px 24px 32px; }
+  .footer__top { flex-direction: column; gap: 40px; }
+  .footer__nav { flex-direction: column; gap: 32px; }
+  .footer__copy { flex-direction: column; gap: 8px; text-align: center; }
+}

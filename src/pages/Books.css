@@ -1,0 +1,92 @@
+.page-hero {
+  padding: 160px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+.page-hero::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 60px; right: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200,169,110,0.15), transparent);
+}
+.page-hero__eyebrow { font-size: 10px; letter-spacing: 0.35em; text-transform: uppercase; color: var(--sepia); margin-bottom: 20px; }
+.page-hero__title { font-family: 'IM Fell English', serif; font-size: clamp(48px, 6vw, 80px); font-weight: 400; color: var(--paper); margin-bottom: 16px; line-height: 1.1; }
+.page-hero__title em { font-style: italic; color: var(--sepia); }
+.page-hero__sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 20px; color: var(--ash); max-width: 520px; line-height: 1.6; }
+
+/* BOOK FULL */
+.book-full { padding: 80px 0; }
+.book-full--alt .book-full__inner { direction: rtl; }
+.book-full--alt .book-full__inner > * { direction: ltr; }
+
+.book-full__inner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 80px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+/* COVER */
+.books-cover {
+  width: 220px; height: 310px;
+  position: relative;
+  filter: drop-shadow(-14px 22px 32px rgba(0,0,0,0.75));
+  transform: rotate(-2deg);
+  transition: transform 0.5s, filter 0.5s;
+  flex-shrink: 0;
+}
+.books-cover:hover { transform: rotate(0) translateY(-6px); filter: drop-shadow(-10px 18px 28px rgba(200,169,110,0.12)) drop-shadow(-14px 22px 32px rgba(0,0,0,0.65)); }
+.books-cover__spine { position: absolute; left: 0; top: 0; width: 9px; height: 100%; background: linear-gradient(180deg, #2a1e08, #1a1208, #2a1e08); }
+.books-cover__face {
+  position: absolute; left: 9px; top: 0; right: 0; bottom: 0;
+  background: linear-gradient(145deg, #1c1408, #2d1f0a, #1c1408);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 28px 20px; overflow: hidden;
+}
+.books-cover__face::before { content: ''; position: absolute; inset: 8px; border: 1px solid rgba(200,169,110,0.22); pointer-events: none; }
+.books-cover__face::after { content: ''; position: absolute; inset: 13px; border: 1px solid rgba(200,169,110,0.08); pointer-events: none; }
+.books-cover__ornament { font-size: 26px; color: rgba(200,169,110,0.5); margin-bottom: 18px; }
+.books-cover__title { font-family: 'IM Fell English', serif; font-style: italic; font-size: 17px; color: var(--sepia); text-align: center; line-height: 1.3; margin-bottom: 12px; }
+.books-cover__divider { width: 32px; height: 1px; background: rgba(200,169,110,0.35); margin: 0 auto 12px; }
+.books-cover__author { font-family: var(--font-sans); font-size: 8px; letter-spacing: 0.25em; text-transform: uppercase; color: rgba(200,169,110,0.4); }
+
+.book-full__label { font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--sepia); margin-bottom: 14px; }
+.book-full__title { font-family: 'IM Fell English', serif; font-size: clamp(28px, 3vw, 44px); font-weight: 400; color: var(--paper); margin-bottom: 28px; line-height: 1.2; }
+.book-full__para { font-size: 14px; line-height: 2; color: rgba(245,240,232,0.58); margin-bottom: 16px; }
+
+.book-full__details {
+  display: flex; flex-wrap: wrap; gap: 0;
+  border: 1px solid rgba(245,240,232,0.06);
+  margin: 32px 0;
+}
+.book-full__detail {
+  display: flex; flex-direction: column; gap: 4px;
+  padding: 16px 24px;
+  border-right: 1px solid rgba(245,240,232,0.06);
+  flex: 1; min-width: 100px;
+}
+.book-full__detail:last-child { border-right: none; }
+.book-full__detail-key { font-size: 9px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--ash); }
+.book-full__detail-val { font-family: 'Cormorant Garamond', serif; font-size: 18px; color: var(--paper); }
+
+.book-full__actions { display: flex; gap: 20px; align-items: center; }
+.book-full__soon { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ash); padding: 13px 0; }
+
+/* QUOTES */
+.book-quotes { background: var(--fog); padding: 48px; border-left: 2px solid rgba(200,169,110,0.2); }
+.book-quotes__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.book-quotes__item { position: relative; padding-top: 24px; }
+.book-quotes__mark { position: absolute; top: 0; left: 0; font-family: 'IM Fell English', serif; font-size: 40px; color: rgba(200,169,110,0.2); line-height: 1; }
+.book-quotes__item p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 15px; color: rgba(245,240,232,0.65); line-height: 1.8; }
+
+@media (max-width: 768px) {
+  .page-hero { padding: 120px 0 60px; }
+  .book-full__inner { grid-template-columns: 1fr; gap: 32px; }
+  .book-full--alt .book-full__inner { direction: ltr; }
+  .books-cover { width: 150px; height: 212px; }
+  .book-quotes { padding: 28px; }
+  .book-quotes__grid { grid-template-columns: 1fr; gap: 24px; }
+  .book-full__details { flex-direction: column; }
+  .book-full__detail { border-right: none; border-bottom: 1px solid rgba(245,240,232,0.06); }
+}

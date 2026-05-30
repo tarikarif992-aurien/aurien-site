@@ -1,0 +1,123 @@
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 500;
+  padding: 28px 60px;
+  transition: background 0.4s, padding 0.4s, backdrop-filter 0.4s;
+}
+.navbar--scrolled {
+  padding: 18px 60px;
+  background: rgba(13,12,10,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(200,169,110,0.1);
+}
+
+.navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.navbar__logo {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  text-decoration: none;
+  cursor: none;
+}
+.navbar__logo-name {
+  font-family: 'IM Fell English', serif;
+  font-style: italic;
+  font-size: 18px;
+  color: var(--sepia);
+  line-height: 1;
+}
+.navbar__logo-sub {
+  font-family: var(--font-sans);
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--ash);
+}
+
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.navbar__links a {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ash);
+  transition: color 0.3s;
+  cursor: none;
+  position: relative;
+}
+.navbar__links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0;
+  width: 0; height: 1px;
+  background: var(--sepia);
+  transition: width 0.3s;
+}
+.navbar__links a:hover, .navbar__links a.active {
+  color: var(--paper);
+}
+.navbar__links a:hover::after, .navbar__links a.active::after { width: 100%; }
+
+.navbar__cta {
+  padding: 9px 22px !important;
+  background: transparent !important;
+  border: 1px solid rgba(200,169,110,0.4) !important;
+  color: var(--sepia) !important;
+  transition: all 0.3s !important;
+}
+.navbar__cta::after { display: none !important; }
+.navbar__cta:hover { background: var(--sepia) !important; color: var(--ink) !important; }
+
+.navbar__burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: none;
+  padding: 4px;
+}
+.navbar__burger span {
+  display: block;
+  width: 24px; height: 1px;
+  background: var(--ash);
+  transition: all 0.3s;
+  transform-origin: center;
+}
+.navbar__burger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); background: var(--sepia); }
+.navbar__burger.open span:nth-child(2) { opacity: 0; }
+.navbar__burger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); background: var(--sepia); }
+
+@media (max-width: 768px) {
+  .navbar { padding: 20px 24px; }
+  .navbar--scrolled { padding: 16px 24px; }
+  .navbar__burger { display: flex; }
+  .navbar__links {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--ink);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s;
+    z-index: -1;
+  }
+  .navbar__links--open { opacity: 1; pointer-events: all; z-index: 490; }
+  .navbar__links a { font-size: 13px; }
+  .navbar__cta { margin-top: 8px; }
+}
