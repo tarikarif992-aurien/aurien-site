@@ -72,8 +72,6 @@ export default function Contact() {
     View LinkedIn Profile
   </a>
 </p>
-    </a>
-  </p>
 </div>
                 <p>Published under pen name <em>Aurein Tarik</em>.<br />All correspondence treated with care and confidentiality.</p>
               </div>
