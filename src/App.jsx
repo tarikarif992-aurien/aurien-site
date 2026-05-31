@@ -3,7 +3,6 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
-import Privacy from './pages/Privacy'
 import Books from './pages/Books'
 import Author from './pages/Author'
 import Research from './Research'
@@ -85,7 +84,6 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/privacy" element={<Privacy />} />
           <Route path="/books" element={<Books />} />
           <Route path="/author" element={<Author />} />
           <Route path="/research" element={<Research />} />
