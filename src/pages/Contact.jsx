@@ -69,7 +69,7 @@ export default function Contact() {
       target="_blank"
       rel="noreferrer"
     >
-      Mohamed Tarik LinkedIn
+      view LinkedIn profile
     </a>
   </p>
 </div>
