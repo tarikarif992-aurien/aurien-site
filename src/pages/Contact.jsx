@@ -56,20 +56,22 @@ export default function Contact() {
   <h3>Direct Contact</h3>
 
   <p>
-    Email:
-    <a href="mailto:tarikind1992@gmail.com">
-      tarikind1992@gmail.com
-    </a>
-  </p>
+  <strong>Email</strong><br />
+  <a href="mailto:tarikind1992@gmail.com">
+    tarikind1992@gmail.com
+  </a>
+</p>
 
-  <p>
-    LinkedIn:
-    <a
-      href="https://www.linkedin.com/in/mohamed-tarik-6ba9a13a0"
-      target="_blank"
-      rel="noreferrer"
-    >
-      view LinkedIn profile
+<p style={{marginTop: '20px'}}>
+  <strong>LinkedIn</strong><br />
+  <a
+    href="https://www.linkedin.com/in/mohamed-tarik-6ba9a13a0"
+    target="_blank"
+    rel="noreferrer"
+  >
+    View LinkedIn Profile
+  </a>
+</p>
     </a>
   </p>
 </div>
