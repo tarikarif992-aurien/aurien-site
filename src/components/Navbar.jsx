@@ -25,6 +25,7 @@ export default function Navbar() {
           <NavLink to="/books" className={({isActive}) => isActive ? 'active' : ''} onClick={() => setMenuOpen(false)}>Books</NavLink>
           <NavLink to="/author" className={({isActive}) => isActive ? 'active' : ''} onClick={() => setMenuOpen(false)}>Author</NavLink>
           <NavLink to="/blog" className={({isActive}) => isActive ? 'active' : ''} onClick={() => setMenuOpen(false)}>Blog</NavLink>
+          <NavLink to="/research" className={({isActive}) => isActive ? 'active' : ''} onClick={() => setMenuOpen(false)}>Research</NavLink>
           <NavLink to="/contact" className={({isActive}) => isActive ? 'active' : ''} onClick={() => setMenuOpen(false)}>Contact</NavLink>
           <Link to="/books" className="navbar__cta" onClick={() => setMenuOpen(false)}>Buy Books</Link>
         </nav>
