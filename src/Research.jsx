@@ -40,7 +40,5 @@ return (
     <p>Research on social change, inequality and public discourse.</p>
   </div>
 </div>
-```
-
-)
+  )
 }
