@@ -4,42 +4,35 @@ export default function Privacy() {
       <h1>Privacy Policy</h1>
 
       <p>
-        This website (aurien.in) respects the privacy of its visitors.
+        This website respects the privacy of its visitors.
       </p>
 
       <h2>Information Collection</h2>
       <p>
-        We may collect information voluntarily provided through contact forms,
-        email communications, or analytics services.
+        Information may be collected through email communication,
+        website analytics, and voluntary user interactions.
       </p>
 
       <h2>Use of Information</h2>
       <p>
-        Information is used solely for communication, research collaboration,
-        and website improvement.
+        Information is used only for communication, research,
+        collaboration, and website improvement.
       </p>
 
       <h2>Cookies</h2>
       <p>
-        This website may use cookies and analytics tools to understand visitor
-        behavior and improve user experience.
-      </p>
-
-      <h2>Third-Party Services</h2>
-      <p>
-        External links, including LinkedIn and downloadable research files,
-        may be subject to their own privacy policies.
+        This website may use cookies and analytics services to
+        improve user experience.
       </p>
 
       <h2>Contact</h2>
       <p>
-        For privacy-related questions, contact:
-        tarikind1992@gmail.com
+        Email: tarikind1992@gmail.com
       </p>
 
       <p>
         Last Updated: May 2026
       </p>
     </div>
-  );
+  )
 }
