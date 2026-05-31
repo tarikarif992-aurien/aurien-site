@@ -52,6 +52,27 @@ export default function Contact() {
               </div>
 
               <div className="contact-note">
+                <div className="contact-direct">
+  <h3>Direct Contact</h3>
+
+  <p>
+    Email:
+    <a href="mailto:tarikind1992@gmail.com">
+      tarikind1992@gmail.com
+    </a>
+  </p>
+
+  <p>
+    LinkedIn:
+    <a
+      href="https://www.linkedin.com/in/mohamed-tarik-6ba9a13a0"
+      target="_blank"
+      rel="noreferrer"
+    >
+      Mohamed Tarik LinkedIn
+    </a>
+  </p>
+</div>
                 <p>Published under pen name <em>Aurein Tarik</em>.<br />All correspondence treated with care and confidentiality.</p>
               </div>
             </div>
